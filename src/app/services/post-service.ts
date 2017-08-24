@@ -13,14 +13,14 @@ export class PostService extends BaseService {
 
 	private postUrl = "apis/post/";
 
-	getAllPosts(): Observable<Post[]> {
-		return (this.http.get(this.postUrl)
+	getAllPosts() : Observable<Post[]> {
+		return(this.http.get(this.postUrl)
 			.map(this.extractData)
 			.catch(this.handleError));
 	}
 
-	getPostByPostId(postId: number): Observable<Post> {
-		return (this.http.get(this.postUrl + postId)
+	getPostByPostId(postId : number) : Observable<Post> {
+		return(this.http.get(this.postUrl + postId)
 			.map(this.extractData)
 			.catch(this.handleError));
 	}
