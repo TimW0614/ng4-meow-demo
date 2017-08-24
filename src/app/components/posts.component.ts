@@ -6,4 +6,5 @@ import {Observable} from "rxjs";
 	templateUrl: "./templates/posts.php"
 })
 
-export class PostsComponent {}
+export class PostsComponent {
+}
