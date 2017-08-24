@@ -342,7 +342,7 @@ class Post implements \JsonSerializable {
 		$parameters = ["postContent" => $postContent];
 		$statement->execute($parameters);
 
-		//build an array of posts
+		//build an array of posts.php
 		$posts = new \SplFixedArray($statement->rowCount());
 		$statement->setFetchMode(\PDO::FETCH_ASSOC);
 		while(($row = $statement->fetch()) !== false) {
@@ -397,7 +397,7 @@ class Post implements \JsonSerializable {
 		];
 		$statement->execute($parameters);
 
-		//build an array of posts
+		//build an array of posts.php
 		$posts = new \SplFixedArray($statement->rowCount());
 		$statement->setFetchMode(\PDO::FETCH_ASSOC);
 		while(($row = $statement->fetch()) !== false) {
@@ -438,7 +438,7 @@ class Post implements \JsonSerializable {
 		$parameters = ["postTitle" => $postTitle];
 		$statement->execute($parameters);
 
-		//build an array of posts
+		//build an array of posts.php
 		$posts = new \SplFixedArray($statement->rowCount());
 		$statement->setFetchMode(\PDO::FETCH_ASSOC);
 		while(($row = $statement->fetch()) !== false) {
@@ -468,7 +468,7 @@ class Post implements \JsonSerializable {
 		$statement = $pdo->prepare($query);
 		$statement->execute();
 
-		//build an array of posts
+		//build an array of posts.php
 		$posts = new \SplFixedArray($statement->rowCount());
 		$statement->setFetchMode(\PDO::FETCH_ASSOC);
 		while(($row = $statement->fetch()) !== false) {

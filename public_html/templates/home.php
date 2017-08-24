@@ -1,5 +1,7 @@
 <div class="sfooter">
-	<div class="sfooter-conteng">
+	<div class="sfooter-content">
+
+		<navbar></navbar>
 
 		<main class="bg p-t-nav">
 			<div class="container">
@@ -15,6 +17,7 @@
 		</main>
 
 	</div>
+
 	<footer class="navbar-fixed-bottom">
 		<div class="container">
 			<div class="row">

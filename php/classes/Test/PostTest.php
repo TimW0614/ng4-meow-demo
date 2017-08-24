@@ -183,7 +183,7 @@ class PostTest extends Ng4DemoTest {
 		$post = new Post(null, $this->VALID_CONTENT, $this->VALID_DATE, $this->VALID_TITLE);
 		$post->insert($this->getPDO());
 
-		//grab the posts from mysql, verify row count and namespace is correct
+		//grab the posts.php from mysql, verify row count and namespace is correct
 		$results = Post::getPostsByPostContent($this->getPDO(), $this->VALID_CONTENT);
 		$this->assertEquals($numRows + 1, $this->getConnection()->getRowCount("post"));
 		$this->assertCount(1, $results);
@@ -215,7 +215,7 @@ class PostTest extends Ng4DemoTest {
 		$post = new Post(null, $this->VALID_CONTENT, $this->VALID_DATE, $this->VALID_TITLE);
 		$post->insert($this->getPDO());
 
-		//grab the posts from mysql, verify row count and namespace is correct
+		//grab the posts.php from mysql, verify row count and namespace is correct
 		$results = Post::getPostsByPostDateRange($this->getPDO(), $this->SUNRISE_DATE, $this->SUNSET_DATE);
 		$this->assertEquals($numRows + 1, $this->getConnection()->getRowCount("post"));
 		$this->assertCount(1, $results);
@@ -248,7 +248,7 @@ class PostTest extends Ng4DemoTest {
 		$post = new Post(null, $this->VALID_CONTENT, $this->VALID_DATE, $this->VALID_TITLE);
 		$post->insert($this->getPDO());
 
-		//grab the posts from mysql, verify row count and namespace is correct
+		//grab the posts.php from mysql, verify row count and namespace is correct
 		$results = Post::getPostsByPostTitle($this->getPDO(), $this->VALID_TITLE);
 		$this->assertEquals($numRows + 1, $this->getConnection()->getRowCount("post"));
 		$this->assertCount(1, $results);
@@ -280,7 +280,7 @@ class PostTest extends Ng4DemoTest {
 		$post = new Post(null, $this->VALID_CONTENT, $this->VALID_DATE, $this->VALID_TITLE);
 		$post->insert($this->getPDO());
 
-		//grab the posts from mysql, verify row count and namespace is correct
+		//grab the posts.php from mysql, verify row count and namespace is correct
 		$results = Post::getAllPosts($this->getPDO());
 		$this->assertEquals($numRows + 1, $this->getConnection()->getRowCount("post"));
 		$this->assertCount(1, $results);
